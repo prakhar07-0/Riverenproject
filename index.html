@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riveren – Pure. Safe. Refreshing. | Premium Packaged Drinking Water</title>
+    <meta name="description"
+        content="Experience the purity of nature in every drop. Riveren brings you premium packaged drinking water, purified with advanced RO+UV+Ozonation technology for your health and peace of mind.">
+    <meta name="keywords"
+        content="packaged drinking water, pure drinking water, RO purified water, UV treated water, premium bottled water, safe drinking water">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deep-ocean: #0C4A6E;
+            --sky-blue: #0EA5E9;
+            --aqua-fresh: #06B6D4;
+            --pure-white: #FFFFFF;
+            --soft-cloud: #F0F9FF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--deep-ocean);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--soft-cloud) 0%, var(--pure-white) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--deep-ocean);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text .tagline {
+            font-size: 1.3rem;
+            color: var(--sky-blue);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--aqua-fresh) 100%);
+            color: var(--pure-white);
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(14, 165, 233, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--pure-white);
+            color: var(--sky-blue);
+            border: 2px solid var(--sky-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--sky-blue);
+            color: var(--pure-white);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 20px 40px rgba(14, 165, 233, 0.2));
+            animation: floatBottle 4s ease-in-out infinite;
+        }
+
+        @keyframes floatBottle {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(2deg);
+            }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--deep-ocean);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Why Riveren Section */
+        .why-riveren {
+            background: var(--soft-cloud);
+        }
+
+        .value-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: var(--pure-white);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(12, 74, 110, 0.08);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(14, 165, 233, 0.15);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--sky-blue) 0%, var(--aqua-fresh) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.3rem;
+            color: var(--deep-ocean);
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* Products Section */
+        .products {
+            background: var(--pure-white);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .product-card {
+            background: var(--soft-cloud);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .product-card:hover {
+            border-color: var(--sky-blue);
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(14, 165, 233, 0.2);
+        }
+
+        .product-image {
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-card h3 {
+            font-size: 1.8rem;
+            color: var(--deep-ocean);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-size {
+            color: var(--sky-blue);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: linear-gradient(135deg, var(--deep-ocean) 0%, #0369a1 100%);
+            color: var(--pure-white);
+        }
+
+        .benefits .section-header h2,
+        .benefits .section-header p {
+            color: var(--pure-white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .benefit-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .benefit-item h3::before {
+            content: '✓';
+            background: var(--aqua-fresh);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--soft-cloud);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--pure-white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(12, 74, 110, 0.08);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--sky-blue);
+            opacity: 0.2;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            color: #475569;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--sky-blue), var(--aqua-fresh));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pure-white);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            color: var(--deep-ocean);
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        .stars {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--pure-white);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--soft-cloud);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(12, 74, 110, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--deep-ocean);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--sky-blue);
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-ocean);
+            color: var(--pure-white);
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--aqua-fresh);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--sky-blue);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text .tagline {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .value-cards,
+            .product-grid,
+            .benefits-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Riveren – Pure. Safe. Refreshing.</h1>
+                <p class="tagline">Premium Packaged Drinking Water</p>
+                <p>Experience the purity of nature in every drop. Riveren brings you premium packaged drinking water,
+                    purified with advanced RO+UV+Ozonation technology for your health and peace of mind.</p>
+                <div class="cta-buttons">
+                    <a href="#products" class="btn btn-primary">Explore Products</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-bottle.png" alt="Riveren 500ml Premium Packaged Drinking Water">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Riveren Section -->
+    <section class="why-riveren" id="why-riveren">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Riveren?</h2>
+                <p>We're committed to delivering the purest, safest drinking water to you and your family</p>
+            </div>
+            <div class="value-cards">
+                <div class="value-card">
+                    <div class="value-icon">💧</div>
+                    <h3>Triple Purification</h3>
+                    <p>Advanced RO+UV+Ozonation technology ensures every drop is perfectly pure and safe</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🏆</div>
+                    <h3>Premium Quality</h3>
+                    <p>BIS certified and tested to meet the highest standards of packaged drinking water</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌱</div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Sustainable packaging and responsible sourcing for a better tomorrow</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">❤️</div>
+                    <h3>Health First</h3>
+                    <p>Enriched with essential minerals for optimal hydration and wellness</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Products</h2>
+                <p>Choose the perfect size for every occasion</p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/bottle-250ml.png" alt="Riveren 250ml Compact Bottle">
+                    </div>
+                    <h3>Compact</h3>
+                    <p class="product-size">250ml</p>
+                    <p>Perfect for on-the-go hydration. Fits easily in your bag, ideal for short trips and quick
+                        refreshment.</p>
+                    <a href="#contact" class="btn btn-primary">Order Now</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/bottle-500ml.png" alt="Riveren 500ml Standard Bottle">
+                    </div>
+                    <h3>Standard</h3>
+                    <p class="product-size">500ml</p>
+                    <p>Our most popular size. Perfect for daily hydration at work, gym, or home. The ideal balance of
+                        portability and capacity.</p>
+                    <a href="#contact" class="btn btn-primary">Order Now</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/bottle-1l.png" alt="Riveren 1L Family Pack Bottle">
+                    </div>
+                    <h3>Family Pack</h3>
+                    <p class="product-size">1 Liter</p>
+                    <p>Great for families and sharing. Perfect for meetings, events, or keeping at your desk for all-day
+                        hydration.</p>
+                    <a href="#contact" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Riveren Difference</h2>
+                <p>Experience water the way nature intended</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>99.9% Purity</h3>
+                    <p>Our advanced triple purification process removes all impurities, bacteria, and contaminants,
+                        ensuring you get the purest water possible.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>RO+UV+Ozonation</h3>
+                    <p>Three-stage purification combining Reverse Osmosis, UV sterilization, and Ozonation for unmatched
+                        safety and quality.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Safety Certified</h3>
+                    <p>BIS certified and regularly tested in accredited laboratories. Every batch meets stringent
+                        quality standards.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Perfect Taste</h3>
+                    <p>Balanced pH and essential minerals retained for a crisp, refreshing taste that keeps you coming
+                        back for more.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Convenient Packaging</h3>
+                    <p>Ergonomic bottle design with easy-grip surface and leak-proof caps. Available in sizes for every
+                        need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Join thousands of satisfied customers who trust Riveren</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">Riveren has become our family's go-to water brand. The taste is
+                        incredibly fresh, and knowing it's triple-purified gives us complete peace of mind. Highly
+                        recommend!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PS</div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Mumbai, Maharashtra</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">As a fitness enthusiast, I need quality hydration. Riveren delivers
+                        every time. The 500ml bottles are perfect for my gym sessions, and the water tastes amazing!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RK</div>
+                        <div class="author-info">
+                            <h4>Rahul Kumar</h4>
+                            <p>Bangalore, Karnataka</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">We switched to Riveren for our office and the team loves it. The quality
+                        is exceptional and the pricing is very reasonable. Great service and timely delivery too!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <h4>Anjali Mehta</h4>
+                            <p>Delhi NCR</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions? We'd love to hear from you</p>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Riveren</h3>
+                <p>Riveren – Pure. Safe. Refreshing.</p>
+                <p>Committed to delivering the purest, safest drinking water to every home.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📘</a>
+                    <a href="#" class="social-icon">📷</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#why-riveren">Why Riveren</a>
+                <a href="#products">Products</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <a href="#products">250ml Bottle</a>
+                <a href="#products">500ml Bottle</a>
+                <a href="#products">1L Bottle</a>
+                <a href="#products">Bulk Orders</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📧 info@riveren.com</p>
+                <p>📞 +91 1800-RIVEREN</p>
+                <p>📍 Your City, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Riveren. All rights reserved. | BIS Certified | ISO 9001:2015</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
